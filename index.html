@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Harshit's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--NAIGATION-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark py-2 fixed-top" style="--bs-bg-opacity: .8" id="fullnav">
+        <div class="container-fluid" data-bs-spy="scroll" data-bs-target="#fullnav" data-bs-offset="75">
+            <a href="#" class="navbar-brand">MY PORTFOLIO</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#aboutme" class="nav-link">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--main-->
+    <section class="bg-dark text-light p-5 text-center text-sm-start" id="home">
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Hi! <span class="text-warning">I'm Harshit</span> </h1>
+                    <h3>Welcome to my portfolio website!</h3>
+                    <p class="my-4">Feel free to check out my work. If you like what you see and would like more information please contact me or head to the “About me” tab.</p>
+                    <button class="btn btn-primary btn-lg text-center" id="#contact">Hire Me</button>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="img/13038.png" alt="faltu">
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--About-->
+    <section class="bg-primary text-light p-3 text-center" id="aboutme">
+        <div class="container">
+            <div>
+                <h1 class="text-center">About Me</h1>
+            </div>
+        </div>
+        <section class="p-5 text-white" id="learn">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md my-3">
+                        <img src="img/my%20photo.jpg" class=" rounded-circle w-50 mx-auto d-block" alt="">
+                    </div>
+                    <div class="col-md p-4 bg-dark bg-gradient rounded" style="--bs-bg-opacity: .8;">
+                        <p class="lead">Hi everyone My name is Harshit Kotiya and i am living in New Delhi,India. </p>
+                        <p class="lead">I am in college learning all about post production in film making. I love to do vfx and graphic designing and wannabe a vfx director. I mostly do motion graphic and designing but i also learned video and audio editting</p>
+                        <p class="lead">I prefer doing freelancing rather than doing a 9-5 job. My dream is to have my own production house one day.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!--portfolio-->
+	<section class="container bg-dark text-light p-5 text-center text-sm-start" id="portfolio" >
+    <div >
+        <style>
+            .hovereffects {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+                cursor: default;
+                margin-bottom: 10px;
+            }
+
+            .hovereffects .overlay {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                -webkit-transition: all 0.4s ease-in-out;
+                transition: all 0.4s ease-in-out
+            }
+
+            .hovereffects img {
+                display: block;
+                position: relative;
+                -webkit-transition: all .4s linear;
+                transition: all .4s linear;
+            }
+
+            .hovereffects h2 {
+                text-transform: uppercase;
+                color: #fff;
+                text-align: center;
+                position: relative;
+                font-size: 17px;
+                background: rgba(0, 0, 0, 0.6);
+                -webkit-transform: translateY(-100px);
+                -ms-transform: translateY(-100px);
+                transform: translateY(-100px);
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                padding: 10px;
+            }
+
+            .hovereffects a.info {
+                text-decoration: none;
+                display: inline-block;
+                text-transform: uppercase;
+                color: #fff;
+                border: 1px solid #fff;
+                background-color: transparent;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                -webkit-transition: all .2s ease-in-out;
+                transition: all .2s ease-in-out;
+                margin: 50px 0 0;
+                padding: 7px 14px;
+            }
+
+            .hovereffects a.info:hover {
+                box-shadow: 0 0 5px #fff;
+
+            }
+
+            .hovereffects:hover img {
+                -ms-transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+
+            .hovereffects:hover .overlay {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+
+            .hovereffects:hover h2,
+            .hovereffects:hover a.info {
+                opacity: 1;
+                filter: alpha(opacity=100);
+                -ms-transform: translateY(0);
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            .hovereffects:hover a.info {
+                -webkit-transition-delay: .2s;
+                transition-delay: .2s;
+            }
+         
+        </style>
+            <h1 class="text-center">Portfolio</h1>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="hovereffects">
+                            <img src="img/FRACTOS%20PRODUCTION%202.png" height="300px" width="100%" alt="images">
+                            <div class="overlay">
+                                <h2>Logo Designing</h2>
+                                <a class="info" href="logo.html">more info</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="hovereffects">
+                            <img src="img/logo%20final%20-min.jpg" height="300px" width="100%" alt="images">
+                            <div class="overlay">
+                                <h2>Motion Graphics</h2>
+                                <a class="info" href="#">more info</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="hovereffects">
+                            <img src="img/Mate%20Painting%20with%20godzilla.jpg" height="300px" width="100%" alt="images">
+                            <div class="overlay">
+                                <h2>Mate paintings</h2>
+                                <a class="info" href="#">more info</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="hovereffects">
+                            <img src="img/Luffy-min.png" height="300px" width="100%" alt="images">
+                            <div class="overlay">
+                                <h2>Character Designing</h2>
+                                <a class="info" href="#">more info</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="hovereffects">
+                            <img src="img/Artboard%201.jpg" height="300px" width="100%" alt="images">
+                            <div class="overlay">
+                                <h2>Web Designing</h2>
+                                <a class="info" href="#">more info</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+    </div>
+		</section>
+    <!--footer-->
+
+    <footer class="p-4  text-white text-center position-relative" id="contact">
+        <div class="container">
+            <section class="text-primary p-3">
+                <div class="container text-center">
+                    <h1>Contact Me</h1>
+                </div>
+                <div class="container ">
+                    <ul class="list-group list-group-flush  ">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Main Location:</span>Uttam Nagar,New Delhi,India
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Contact No:</span>8287716704
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Email ID:</span>harshitkotiya5@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="my-4 mx-5 ">
+                <form action="/action_page.php">
+                    <div class="mb-3">
+                        <label for="pwd" class="form-label text-primary">Name:</label>
+                        <input type="name" class="form-control" id="pwd" placeholder="Enter name" name="name">
+                    </div>
+                    <div class="mb-3 mt-">
+                        <label for="email" class="form-label text-primary">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    </div>
+
+                    <div class="form-check">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </section>
+        </div>
+        <p class="lead mt-3 text-dark">Copyright &copy; 2022 Fractos Production</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
+</html>
